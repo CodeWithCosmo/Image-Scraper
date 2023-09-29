@@ -1,6 +1,6 @@
 # **`Image Scraping Project`**
 
-![UI](src/ui.png)
+![UI](src/home.png)
 
 
 * ## **What is this project?**
