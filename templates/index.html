@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Scraper API</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <center><header>
+        <h1>Image Scraper</h1>
+        <p>Search for images and download them.</p>
+    </header></center>
+
+    <main>
+        <div class="container">
+            <h2>Search for Images</h2>
+            <form method="POST" action="/search">
+                <div class="form-group">
+                    <input type="text" name="content"  placeholder="Enter your search query" required>
+                </div>
+                <center><button type="submit" class="btn-search">Search</button></center>
+            </form>
+        </div>
+    </main>
+    <br>
+
+    <main>
+        <div class="container">
+            <h2>Search Results</h2>
+            {% if context %}
+                <center><h3>{{ context }}</h3></center>
+            {% endif %}
+        </div>
+    </main>
+
+    <center><footer>
+        <p>&copy; 2023 Image Scraper</p>
+    </footer></center>
+</body>
+</html>
